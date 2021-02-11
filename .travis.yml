@@ -1,0 +1,21 @@
+language: python
+install: skip
+script: python ./hello.py
+# arch: ppc64le 
+jobs:
+  include:
+     - dist: focal
+       before_install:
+         - lscpu
+         - free -h
+     - dist: focal
+       vm:
+         size: large
+       before_install:
+         - lscpu
+         - free -h
+     - os: osx
+       python: "2.7"
+     - os: windows
+     - os: freebsd
+     
