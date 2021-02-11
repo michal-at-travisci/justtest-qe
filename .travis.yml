@@ -1,7 +1,7 @@
 language: python
 install: skip
 script: python ./hello.py
-# arch: ppc64le 
+
 jobs:
   include:
      - dist: focal
