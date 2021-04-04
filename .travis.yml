@@ -59,5 +59,17 @@ jobs:
      - os: freebsd
        script: python ./hello.py
        vm:
+         size: medium
+     - os: freebsd
+       script: python ./hello.py
+       vm:
+         size: large
+     - os: freebsd
+       script: python ./hello.py
+       vm:
+         size: x-large
+     - os: freebsd
+       script: python ./hello.py
+       vm:
          size: 2x-large
      #- os: windows
