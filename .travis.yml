@@ -54,7 +54,6 @@ jobs:
        script: python ./hello.py
        vm:
          size: 2x-large
-     #- os: windows
      - os: freebsd
        script: python ./hello.py
-     
+     #- os: windows
