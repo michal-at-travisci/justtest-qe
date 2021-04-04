@@ -13,7 +13,7 @@ jobs:
      - os: osx
        python: "2.7"
        script: python ./hello.py
-     - os: windows
+     #- os: windows
      - os: freebsd
        script: python ./hello.py
      
