@@ -1,21 +1,18 @@
 language: python
 install: skip
-script: python ./hello.py
+script: 
+  - echo "Threads/core $(nproc --all)"
+  - free -g
 
 jobs:
   include:
      - dist: focal
-       script:
-         - echo "Threads/core $(nproc --all)"
-         - free -g
      - dist: focal
        vm:
          size: large
-       script:
-         - echo "Threads/core $(nproc --all)"
-         - free -g
      - os: osx
        python: "2.7"
-     #- os: windows
+       script: python ./hello.py
+     - os: windows
      - os: freebsd
      
