@@ -88,4 +88,17 @@ jobs:
      - arch: ppc64le
      - arch: s390x
      - arch: arm64
+     - arch: arm64
+       vm:
+         size: large
+     - arch: arm64-graviton2
+       group: edge
+       dist: focal
+     - arch: arm64-graviton2
+       group: edge
+       dist: focal
+       virt: vm
+       vm:
+         size: x-large
+
      
