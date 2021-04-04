@@ -6,16 +6,16 @@ jobs:
   include:
      - dist: focal
        before_install:
-         - lscpu
-         - free -h
+         - echo "Threads/core: $(nproc --all)"
+         - free -g
      - dist: focal
        vm:
          size: large
        before_install:
-         - lscpu
-         - free -h
+         - echo "Threads/core: $(nproc --all)"
+         - free -g
      - os: osx
        python: "2.7"
-     - os: windows
+     #- os: windows
      - os: freebsd
      
