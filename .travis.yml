@@ -5,14 +5,14 @@ script: python ./hello.py
 jobs:
   include:
      - dist: focal
-       before_install:
-         - echo "Threads/core: $(nproc --all)"
+       script:
+         - echo "Threads/core $(nproc --all)"
          - free -g
      - dist: focal
        vm:
          size: large
-       before_install:
-         - echo "Threads/core: $(nproc --all)"
+       script:
+         - echo "Threads/core $(nproc --all)"
          - free -g
      - os: osx
        python: "2.7"
